@@ -1,42 +1,72 @@
+/* Root container */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fdf2f8, #ede9fe);
+  color: #1e1b4b;
+  font-family: 'Inter', sans-serif;
   padding: 2rem;
-  text-align: center;
 }
 
+/* Logo animation */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 300ms ease, filter 300ms ease;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 1.2rem #c084fc);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* Card styling */
 .card {
-  padding: 2em;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(192, 132, 252, 0.25);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(168, 85, 247, 0.4);
 }
 
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #c084fc, #f472b6);
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Links */
+a {
+  color: #a855f7;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+a:hover {
+  color: #ec4899;
+}
+
+/* Small text */
 .read-the-docs {
-  color: #888;
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 1rem;
 }
